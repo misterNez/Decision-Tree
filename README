@@ -1,0 +1,52 @@
+Author: Nick Nesbit
+Professor: Mark Hauschild
+Date: 4/18/2018
+
+
+Description:
+
+	Artificial Intelligence: CS 4300
+	Project #4: Decision Tree Implementation
+
+	*The task is to build a binary decision tree given a file that contains a collection of sample data.
+	
+	*User should then be able to enter a sample query and receive a classification that follows the decision tree logic.
+	
+	*Input file should look something like the following: 
+		3 5
+		1 1 1 0
+		1 1 0 1
+		0 0 1 1
+		1 1 0 0
+		1 0 0 1  
+		
+	*The first number on the first line specifies the number of attributes.
+	*The second number on the first line specifies the number of samples.
+	*The remaining lines contain a single sample, with attribute values seperated by a space, and 
+		the final number at the end of each line specifying the classification for that sample.
+	
+Solution Method:
+
+	*I used an array of structures (Sample) to store the sample data rather than C++ STL lists.
+	*In an event that two outcomes are equally likely, the outcome will be determined by 50/50 random chance.
+	*I followed the Decision Tree Learning Algorithm from the textbook.
+	
+Environment:
+
+	*Developed with C++ using the Eclipse IDE on Windows 10 on a 64-bit Lenovo laptop.
+	*See Makefile for compilation details.
+	*Able to run on command line like so: ./dectree data.txt
+
+Files:
+
+	main.cpp:			Main driver file.
+	
+	sample.h: 			Declares structure for a sample.
+	
+	tree.cpp: 			Defines the structure for the decision tree.
+	
+	data.txt			A textfile containing random sample data
+	
+Problems:
+
+	Checking validity of user input may not be perfect.
